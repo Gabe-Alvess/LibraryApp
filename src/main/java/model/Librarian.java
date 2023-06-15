@@ -1,15 +1,25 @@
 package model;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
-public class Librarian {
+public class Librarian implements Observer {
 
     private String name;
     private String ID;
+    private String password;
 
-    public Librarian(String name, String ID) {
-        this.name = name;
-        this.ID = ID;
+    private List<String> notifications;
+
+    public Librarian(String name, String ID,String password) {
+        if (!name.isEmpty()&&!ID.isEmpty()&&!password.isEmpty()){
+           this.name = name;
+                   this.ID = ID;
+                   this.password = password;
+        }
+        this.notifications = new ArrayList<>();
     }
 
     public String getName() {
@@ -20,12 +30,13 @@ public class Librarian {
         return ID;
     }
 
+    public void readNotifications() {
+        notifications.forEach(System.out::println);
+    }
+
     @Override
-    public String toString() {
-        return "Librarian{" +
-                "name='" + name + '\'' +
-                ", ID='" + ID + '\'' +
-                '}';
+    public void notify(String notification) {
+        notifications.add(notification);
     }
 
     @Override
@@ -39,5 +50,13 @@ public class Librarian {
     @Override
     public int hashCode() {
         return Objects.hash(name, ID);
+    }
+
+    @Override
+    public String toString() {
+        return "Librarian{" +
+                "name='" + name + '\'' +
+                ", ID='" + ID + '\'' +
+                '}';
     }
 }

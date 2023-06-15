@@ -1,24 +1,29 @@
 package model;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
-public class BorrowedBook {
+public class BorrowedBook implements Subject {
 
     private User user;
     private Book book;
-    private Date dueDate;
-    private Date borrowDate;
+    private LocalDate dueDate;
+    private LocalDate borrowDate;
     private boolean hasFine;
     private double fineAmount;
+    private List<Observer> observerList;
 
-    public BorrowedBook(User user, Book book, Date dueDate, Date borrowDate) {
+    public BorrowedBook(User user, Book book, LocalDate dueDate) {
         this.user = user;
         this.book = book;
         this.dueDate = dueDate;
-        this.borrowDate = borrowDate;
+        this.borrowDate = LocalDate.now();
         this.hasFine = false;
         this.fineAmount = 0.00;
+        this.observerList = new ArrayList<>();
     }
 
     //TODO
@@ -33,11 +38,11 @@ public class BorrowedBook {
         this.book = book;
     }
 
-    public void setDueDate(Date dueDate) {
+    public void setDueDate(LocalDate dueDate) {
         this.dueDate = dueDate;
     }
 
-    private void setBorrowDate(Date borrowDate) {
+    private void setBorrowDate(LocalDate borrowDate) {
         this.borrowDate = borrowDate;
     }
 
@@ -57,11 +62,11 @@ public class BorrowedBook {
         return book;
     }
 
-    public Date getDueDate() {
+    public LocalDate getDueDate() {
         return dueDate;
     }
 
-    public Date getBorrowDate() {
+    public LocalDate getBorrowDate() {
         return borrowDate;
     }
 
@@ -96,5 +101,20 @@ public class BorrowedBook {
     @Override
     public int hashCode() {
         return Objects.hash(user, book, dueDate, borrowDate);
+    }
+
+    @Override
+    public void attachLibrarian(Observer observer) {
+        observerList.add(observer);
+    }
+
+    @Override
+    public void detachLibrarian(Observer observer) {
+        observerList.remove(observer);
+    }
+
+    @Override
+    public void notifyLibrarians(String notification) {
+        observerList.forEach(observer -> observer.notify(notification));
     }
 }

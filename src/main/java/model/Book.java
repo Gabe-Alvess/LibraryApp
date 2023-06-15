@@ -4,50 +4,55 @@ import java.util.Date;
 import java.util.Objects;
 
 public class Book {
+    private static long nextID = 1;
 
-    private String ID;
+    private long ID;
     private String name;
     private String author;
     private String ISBN;
-    private int specimenNumber;
-    private String gender;
+    private String genre;
     private boolean isAvailable;
     private Date releaseDate;
 
-    public Book(String name, String author, String ISBN, int specimenNumber, String gender, Date releaseDate) {
-        setID(specimenNumber);
-        this.name = name;
-        this.author = author;
-        this.specimenNumber = specimenNumber;
-        this.ISBN = ISBN;
-        this.gender = gender;
+
+    public Book(String name, String author, String ISBN, String genre, Date releaseDate) {
+        setID();
+        setName(name);
+        setAuthor(author);
+        setISBN(ISBN);
+        setGenre(genre);
         this.releaseDate = releaseDate;
+
     }
 
     //TODO
     // ID made from ISBN + Specimen Book Number - Check if ok ?
-    private void setID(int specimenNumber) {
-        this.ID = getISBN() + "-" + specimenNumber;
+    private void setID() {
+        this.ID = nextID++;
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (!name.isEmpty()) {
+            this.name = name;
+        }
     }
 
     public void setAuthor(String author) {
-        this.author = author;
+        if (!author.isEmpty()) {
+            this.author = author;
+        }
     }
 
     public void setISBN(String ISBN) {
-        this.ISBN = ISBN;
+        if (ISBN.matches("^[0-9]{3}-[0-9]-[0-9]{2}-[0-9]{6}-[0-9]$")) {
+            this.ISBN = ISBN;
+        }
     }
 
-    public void setSpecimenNumber(int specimenNumber) {
-        this.specimenNumber = specimenNumber;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setGenre(String genre) {
+        if (!genre.isEmpty()) {
+            this.genre = genre;
+        }
     }
 
     public void setAvailable(boolean available) {
@@ -58,7 +63,7 @@ public class Book {
         this.releaseDate = releaseDate;
     }
 
-    public String getID() {
+    public long getID() {
         return ID;
     }
 
@@ -74,12 +79,8 @@ public class Book {
         return ISBN;
     }
 
-    public int getSpecimenNumber() {
-        return specimenNumber;
-    }
-
-    public String getGender() {
-        return gender;
+    public String getGenre() {
+        return genre;
     }
 
     public boolean isAvailable() {
@@ -89,6 +90,17 @@ public class Book {
     public Date getReleaseDate() {
         return releaseDate;
     }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Book book)) return false;
+        return Objects.equals(name, book.name) && Objects.equals(author, book.author) && Objects.equals(ISBN, book.ISBN);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, author, ISBN);
+    }
 
     @Override
     public String toString() {
@@ -97,22 +109,11 @@ public class Book {
                 ", name='" + name + '\'' +
                 ", author='" + author + '\'' +
                 ", ISBN='" + ISBN + '\'' +
-                ", gender='" + gender + '\'' +
+                ", genre='" + genre + '\'' +
                 ", isAvailable=" + isAvailable +
                 ", releaseDate=" + releaseDate +
                 '}';
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Book book = (Book) o;
-        return specimenNumber == book.specimenNumber && Objects.equals(ISBN, book.ISBN);
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(ISBN, specimenNumber);
-    }
 }

@@ -1,6 +1,6 @@
 package model;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -13,42 +13,54 @@ public class User {
     private String postCode;
     private String email;
     private String password;
-    private List<BorrowedBook> borrowedBooks;
+    private List<BorrowedBook> borrowedBookUserList;
 
 
     public User(String firstName, String lastName, String address, String postCode, String email, String password) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.address = address;
-        this.postCode = postCode;
-        this.email = email;
-        this.password = password;
+        setFirstName(firstName);
+        setLastName(lastName);
+        setAddress(address);
+        setPostCode(postCode);
+        setEmail(email);
+        setPassword(password);
+        this.borrowedBookUserList = new ArrayList<>();
     }
-
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
+        if (!firstName.isEmpty()){
+            this.firstName = firstName;
+                }
+        }
     public void setLastName(String lastName) {
-        this.lastName = lastName;
+        if (!lastName.isEmpty()){
+            this.lastName = lastName;
+        }
     }
-
     public void setAddress(String address) {
+        if (!address.isEmpty()){
         this.address = address;
+        }
     }
 
     public void setPostCode(String postCode) {
-        this.postCode = postCode;
+        if (!postCode.isEmpty()){
+            this.postCode = postCode;
+        }
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        if (email.contains("@") && email.contains(".")
+                && email.indexOf("@") == email.lastIndexOf("@")
+                && email.lastIndexOf("@") < email.lastIndexOf(".")){
+            this.email = email;
+        }
     }
 
     //TODD
     // change password if user forgot the password
     private void setPassword(String password) {
-        this.password = password;
+        if (!firstName.isEmpty()){
+            this.password = password;
+        }
     }
 
     public String getID() {
@@ -75,8 +87,8 @@ public class User {
         return email;
     }
 
-    public List<BorrowedBook> getBorrowedBooks() {
-        return new LinkedList<BorrowedBook>();
+    public List<BorrowedBook> getBorrowedBookUserList() {
+     return new ArrayList<>(borrowedBookUserList);
     }
 
     @Override
@@ -88,7 +100,7 @@ public class User {
                 ", address='" + address + '\'' +
                 ", postCode='" + postCode + '\'' +
                 ", email='" + email + '\'' +
-                ", borrowedBooks=" + borrowedBooks +
+                ", borrowedBooks=" + borrowedBookUserList +
                 '}';
     }
 
