@@ -10,7 +10,7 @@ public interface BorrowedBookRepo {
 
     boolean addBorrowedBook(BorrowedBook borrowedBook);
 
-    boolean removeBorrowedBook(BorrowedBook borrowedBook);
+    boolean removeBorrowedBook(Long bookId);
 
     boolean addBorrowedBooksList(List<BorrowedBook> borrowedBooks);
 

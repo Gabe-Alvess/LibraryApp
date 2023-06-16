@@ -2,6 +2,7 @@ package repository;
 
 import model.BorrowedBook;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -10,7 +11,7 @@ public class LibraryBorrowedBookRepo implements BorrowedBookRepo {
     private final List<BorrowedBook> borrowedBooks;
 
     public LibraryBorrowedBookRepo() {
-        borrowedBooks = new LinkedList<>();
+        borrowedBooks = new ArrayList<>();
     }
 
     @Override
@@ -24,8 +25,17 @@ public class LibraryBorrowedBookRepo implements BorrowedBookRepo {
     }
 
     @Override
-    public boolean removeBorrowedBook(BorrowedBook borrowedBook) {
-        return borrowedBooks.remove(borrowedBook);
+    public boolean removeBorrowedBook(Long bookId) {
+
+        Optional<BorrowedBook> foundBook = borrowedBooks.stream()
+                .filter(borrowedBook -> borrowedBook.getBook().getID() == bookId)
+                .findFirst();
+        if (foundBook.isPresent()) {
+            borrowedBooks.remove(foundBook.get());
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
@@ -35,7 +45,7 @@ public class LibraryBorrowedBookRepo implements BorrowedBookRepo {
 
     @Override
     public List<BorrowedBook> getAllBorrowedBooks() {
-        return borrowedBooks;
+        return new ArrayList<>(borrowedBooks);
     }
 
 

@@ -3,29 +3,29 @@ package repository;
 import model.Librarian;
 import model.User;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class AuthenticationRepository {
 
-    private List<User> usersList;
-    private List<Librarian> librarianList;
+    private final List<User> usersList;
+//    private List<Librarian> librarianList;
 
-    public User getUser(String username) {
-
-        // Logic to fetch user from a database
-        // Return the User object if found, or null otherwise
-        return null;
+    public AuthenticationRepository() {
+        usersList = new ArrayList<>();
+//        librarianList = new ArrayList<>();
     }
 
-    public User setUser(String username) {
-        //User user = new User();
-
-        //user.setPass
-         return new User("asd", "last", "adress", "654", "@emanio", "password");
+    // Logic to fetch user from a database
+    // Return the User object if found, otherwise empty optional
+    public Optional<User> getUser(String username) {
+        return usersList.stream().filter(user -> user.getUserName().equalsIgnoreCase(username)).findFirst();
     }
 
-    public Librarian setLibrarian() {
+    public boolean registerUser(String email, String username, String password) {
+        User newUser = new User(email, username, password);
 
-        return new Librarian("name", "asda", "asdas");
+        return usersList.add(newUser);
     }
 }

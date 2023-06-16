@@ -10,7 +10,7 @@ import java.util.Optional;
 
 
 // implement singleton pattern because we need only one instance of class
-public class BorrowedBookService implements Subject{
+public class BorrowedBookService implements Subject {
 
 
     private LibraryBorrowedBookRepo libraryBorrowedBookRepo;
@@ -42,30 +42,33 @@ public class BorrowedBookService implements Subject{
         // retrieve the book id based on name ???
         Optional<Book> optionalBook = bookService.checkBook(bookName);
 
-        LocalDate dueDate  = LocalDate.now().plusMonths(1);
+        LocalDate dueDate = LocalDate.now().plusMonths(1);
 
         if (optionalBook.isPresent() && optionalBook.get().isAvailable()) {
             book = optionalBook.get();
             book.setAvailable(!book.isAvailable());
 
-            BorrowedBook borrowedBook = new BorrowedBook(user,book, dueDate);
+            BorrowedBook borrowedBook = new BorrowedBook(user, book, dueDate);
             libraryBorrowedBookRepo.addBorrowedBook(borrowedBook);
         }
 
-       return Optional.ofNullable(book);
+        return Optional.ofNullable(book);
     }
 
     public boolean renewBorrowedBook(User user, Long idBorrowedBook) {
-        Optional<BorrowedBook> foundBB = user.getBorrowedBookUserList()
+
+        Optional<BorrowedBook> foundBB = user.getUserListOfBorrowedBooks()
                 .stream()
                 .filter(borrowedBook -> borrowedBook.getBook().getID() == idBorrowedBook)
                 .findFirst();
 
-
-        LocalDate nowDate = LocalDate.now();
-        LocalDate dueDate  = LocalDate.now().plusWeeks(2);
+        LocalDate nowDate;
+        LocalDate dueDate;
 
         if (foundBB.isPresent()) {
+            nowDate = LocalDate.now();
+            dueDate = LocalDate.now().plusWeeks(2);
+
             if (foundBB.get().getDueDate().isBefore(nowDate)) {
                 foundBB.get().setDueDate(dueDate);
                 return true;
@@ -78,6 +81,20 @@ public class BorrowedBookService implements Subject{
         return false;
     }
 
+    public boolean removeBorrowedBook(User user, Long bookId) {
+
+        Optional<BorrowedBook> foundBB = user.getUserListOfBorrowedBooks()
+                .stream()
+                .filter(borrowedBook -> borrowedBook.getBook().getID() == bookId)
+                .findFirst();
+
+        if (foundBB.isPresent()) {
+            foundBB.get().getBook().setAvailable(true);
+            user.deleteBook(foundBB.get());
+            return true;
+        }
+        return false;
+    }
 
 
     @Override
@@ -92,7 +109,7 @@ public class BorrowedBookService implements Subject{
 
     @Override
     public void notifyLibrarians(String notification) {
-       observerList.forEach(observer -> observer.notify(notification));
+        observerList.forEach(observer -> observer.notify(notification));
     }
 
 //    public BorrowedBook returnBorrowedBook(long idBorrowedBook) {

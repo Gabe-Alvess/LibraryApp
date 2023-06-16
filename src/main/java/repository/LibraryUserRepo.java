@@ -2,14 +2,17 @@ package repository;
 
 import model.User;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 public class LibraryUserRepo implements UserRepo {
 
-    private List<User> usersList;
+    private final List<User> usersList;
 
-
+    public LibraryUserRepo() {
+        usersList = new ArrayList<>();
+    }
 
     @Override
     public boolean addUser(User user) {
@@ -17,34 +20,20 @@ public class LibraryUserRepo implements UserRepo {
     }
 
     @Override
-    public Optional<User> getUser(String id) {
-
-        //  throws
-        Optional<User> optionalUser = usersList.stream()
-                .filter(user -> user.getID().equalsIgnoreCase(id))
-                .findFirst();
-
-        return optionalUser;
+    public Optional<User> getUser(int id) {
+        return usersList.stream().filter(user -> user.getID() == id).findFirst();
     }
 
     @Override
-    public void updateUser(User user) {
+    public boolean removeUser(int id) {
+        Optional<User> optionalUser = usersList.stream().filter(user -> user.getID() == id).findAny();
 
-    }
-
-    @Override
-    public boolean removeUser(String id) {
-
-        Optional<User> optionalUser =  usersList.stream()
-                    .filter(user -> user.getID().equalsIgnoreCase(id))
-                    .findAny();
-
-        return optionalUser.map(user -> usersList.remove(user)).orElse(false);
+        return optionalUser.map(usersList::remove).orElse(false);
     }
 
     @Override
     public List<User> getAllUsers() {
-        return null;
+        return new ArrayList<>(usersList);
     }
 
 

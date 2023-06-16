@@ -6,104 +6,73 @@ import java.util.Objects;
 
 public class User {
 
-    private String ID;
-    private String firstName;
-    private String lastName;
-    private String address;
-    private String postCode;
+    private int id = 0;
     private String email;
+    private String userName;
     private String password;
-    private List<BorrowedBook> borrowedBookUserList;
+    private final List<BorrowedBook> userListOfBorrowedBooks;
 
 
-    public User(String firstName, String lastName, String address, String postCode, String email, String password) {
-        setFirstName(firstName);
-        setLastName(lastName);
-        setAddress(address);
-        setPostCode(postCode);
+    public User(String email, String userName, String password) {
         setEmail(email);
+        setUserName(userName);
         setPassword(password);
-        this.borrowedBookUserList = new ArrayList<>();
-    }
-    public void setFirstName(String firstName) {
-        if (!firstName.isEmpty()){
-            this.firstName = firstName;
-                }
-        }
-    public void setLastName(String lastName) {
-        if (!lastName.isEmpty()){
-            this.lastName = lastName;
-        }
-    }
-    public void setAddress(String address) {
-        if (!address.isEmpty()){
-        this.address = address;
-        }
+        this.userListOfBorrowedBooks = new ArrayList<>();
+        id++;
     }
 
-    public void setPostCode(String postCode) {
-        if (!postCode.isEmpty()){
-            this.postCode = postCode;
-        }
+    public int getID() {
+        return id;
     }
 
     public void setEmail(String email) {
         if (email.contains("@") && email.contains(".")
                 && email.indexOf("@") == email.lastIndexOf("@")
-                && email.lastIndexOf("@") < email.lastIndexOf(".")){
+                && email.lastIndexOf("@") < email.lastIndexOf(".")) {
             this.email = email;
+        } else {
+            System.out.println("INVALID EMAIL!");
+            this.email = userName + "@email.com";
         }
-    }
-
-    //TODD
-    // change password if user forgot the password
-    private void setPassword(String password) {
-        if (!firstName.isEmpty()){
-            this.password = password;
-        }
-    }
-
-    public String getID() {
-        return ID;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public String getPostCode() {
-        return postCode;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public String getPassword() { return password; }
+    public void setUserName(String userName) {
+        if (!userName.trim().isEmpty()) {
+            this.userName = userName;
+        } else {
+            System.out.println("INVALID USERNAME!");
+            this.userName = "NO_USERNAME";
+        }
 
-    public List<BorrowedBook> getBorrowedBookUserList() {
-     return new ArrayList<>(borrowedBookUserList);
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "ID='" + ID + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", address='" + address + '\'' +
-                ", postCode='" + postCode + '\'' +
-                ", email='" + email + '\'' +
-                ", borrowedBooks=" + borrowedBookUserList +
-                '}';
+    public String getUserName() {
+        return userName;
+    }
+
+    private void setPassword(String password) {
+        if (!password.trim().isEmpty()) {
+            this.password = password;
+        } else {
+            System.out.println("PLEASE ENTER A VALID PASSWORD!");
+            this.password = "NO_PASSWORD";
+        }
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public List<BorrowedBook> getUserListOfBorrowedBooks() {
+        return new ArrayList<>(userListOfBorrowedBooks);
+    }
+
+    public void deleteBook(BorrowedBook book) {
+        userListOfBorrowedBooks.remove(book);
     }
 
     @Override
@@ -111,11 +80,22 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(ID, user.ID);
+        return Objects.equals(id, user.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(ID);
+        return Objects.hash(id);
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "ID='" + id + '\'' +
+                ", email='" + email + '\'' +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", userListOfBorrowedBooks=" + userListOfBorrowedBooks +
+                '}';
     }
 }

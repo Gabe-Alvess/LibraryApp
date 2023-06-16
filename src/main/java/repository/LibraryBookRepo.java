@@ -43,5 +43,4 @@ public class LibraryBookRepo implements BookRepo {
         return books;
     }
 
-    private
 }

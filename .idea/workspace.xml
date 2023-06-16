@@ -6,8 +6,26 @@
   <component name="ChangeListManager">
     <list default="true" id="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LibraryApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LibraryApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/AuthenticationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/AuthenticationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/LibraryBorrowedBookRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/LibraryBorrowedBookRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/LibraryUserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/LibraryUserRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/UserRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/BorrowedBookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/BorrowedBookService.java" afterDir="false" />
     </list>
-    <list id="080a6dbe-3306-4d67-9ca1-5a5229ba48f8" name="Changes by bogda" comment="" />
+    <list id="080a6dbe-3306-4d67-9ca1-5a5229ba48f8" name="Changes by bogda" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LibraryApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LibraryApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Subject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/AuthenticationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/AuthenticationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/BorrowedBookRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/BorrowedBookRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/LibraryBookRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/LibraryBookRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/LibraryBorrowedBookRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/LibraryBorrowedBookRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/BorrowedBookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/BorrowedBookService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +54,99 @@
         <option name="url" value="https://github.com/Gabe-Alvess/LibraryApp.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/repository/LibraryBorrowedBookRepo.java">
+      <ranges>
+        <range start1="4" end1="4" start2="4" end2="5" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="12" end1="13" start2="13" end2="14" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="26" end1="28" start2="27" end2="38" changelist="080a6dbe-3306-4d67-9ca1-5a5229ba48f8" />
+        <range start1="37" end1="38" start2="47" end2="48" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/controller/LibraryApplication.java">
+      <ranges>
+        <range start1="5" end1="6" start2="5" end2="5" changelist="080a6dbe-3306-4d67-9ca1-5a5229ba48f8" />
+        <range start1="15" end1="16" start2="14" end2="16" changelist="080a6dbe-3306-4d67-9ca1-5a5229ba48f8" />
+        <range start1="19" end1="21" start2="19" end2="19" changelist="080a6dbe-3306-4d67-9ca1-5a5229ba48f8" />
+        <range start1="39" end1="41" start2="37" end2="49" changelist="080a6dbe-3306-4d67-9ca1-5a5229ba48f8" />
+        <range start1="42" end1="46" start2="50" end2="51" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="47" end1="54" start2="52" end2="53" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="56" end1="57" start2="55" end2="56" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="59" end1="60" start2="58" end2="59" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="70" end1="73" start2="69" end2="71" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="75" end1="77" start2="73" end2="74" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="78" end1="79" start2="75" end2="76" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="81" end1="83" start2="78" end2="87" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="86" end1="88" start2="90" end2="107" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="90" end1="91" start2="109" end2="110" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="101" end1="104" start2="120" end2="122" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="106" end1="108" start2="124" end2="126" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="109" end1="110" start2="127" end2="128" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="112" end1="115" start2="130" end2="131" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="116" end1="128" start2="132" end2="132" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="129" end1="129" start2="133" end2="168" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/service/BorrowedBookService.java">
+      <ranges>
+        <range start1="12" end1="13" start2="12" end2="13" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="44" end1="45" start2="44" end2="45" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="50" end1="51" start2="50" end2="51" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="54" end1="55" start2="54" end2="55" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="58" end1="59" start2="58" end2="60" changelist="080a6dbe-3306-4d67-9ca1-5a5229ba48f8" />
+        <range start1="62" end1="63" start2="63" end2="63" changelist="080a6dbe-3306-4d67-9ca1-5a5229ba48f8" />
+        <range start1="64" end1="66" start2="64" end2="66" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="68" end1="68" start2="68" end2="71" changelist="080a6dbe-3306-4d67-9ca1-5a5229ba48f8" />
+        <range start1="80" end1="80" start2="83" end2="97" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="94" end1="95" start2="111" end2="112" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/service/AuthenticationService.java">
+      <ranges>
+        <range start1="4" end1="4" start2="4" end2="6" changelist="080a6dbe-3306-4d67-9ca1-5a5229ba48f8" />
+        <range start1="8" end1="8" start2="10" end2="11" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="13" end1="13" start2="16" end2="23" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="14" end1="19" start2="24" end2="26" changelist="080a6dbe-3306-4d67-9ca1-5a5229ba48f8" />
+        <range start1="20" end1="20" start2="27" end2="34" changelist="080a6dbe-3306-4d67-9ca1-5a5229ba48f8" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/model/User.java">
+      <ranges>
+        <range start1="8" end1="13" start2="8" end2="9" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="14" end1="14" start2="10" end2="11" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="15" end1="16" start2="12" end2="13" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="18" end1="23" start2="15" end2="16" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="24" end1="24" start2="17" end2="18" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="25" end1="26" start2="19" end2="21" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="27" end1="41" start2="22" end2="25" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="43" end1="46" start2="27" end2="48" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="47" end1="47" start2="49" end2="50" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="49" end1="55" start2="52" end2="54" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="57" end1="59" start2="56" end2="56" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="60" end1="61" start2="57" end2="58" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="62" end1="62" start2="59" end2="62" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="65" end1="87" start2="65" end2="67" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="88" end1="90" start2="68" end2="68" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="91" end1="93" start2="69" end2="71" changelist="080a6dbe-3306-4d67-9ca1-5a5229ba48f8" />
+        <range start1="95" end1="106" start2="73" end2="75" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="113" end1="114" start2="82" end2="83" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="118" end1="119" start2="87" end2="88" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="120" end1="120" start2="89" end2="100" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/repository/AuthenticationRepository.java">
+      <ranges>
+        <range start1="5" end1="5" start2="5" end2="6" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="6" end1="6" start2="7" end2="8" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="9" end1="11" start2="11" end2="13" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="12" end1="13" start2="14" end2="18" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="14" end1="17" start2="19" end2="23" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+        <range start1="19" end1="21" start2="25" end2="27" changelist="080a6dbe-3306-4d67-9ca1-5a5229ba48f8" />
+        <range start1="22" end1="24" start2="28" end2="29" changelist="080a6dbe-3306-4d67-9ca1-5a5229ba48f8" />
+        <range start1="25" end1="30" start2="30" end2="30" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
+      </ranges>
+    </file>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -100,16 +211,5 @@
       <updated>1686750951720</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controller/LibraryApplication.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
