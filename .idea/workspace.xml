@@ -5,22 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/AuthenticationRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/BorrowedBookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/BorrowedBookService.java" afterDir="false" />
     </list>
-    <list id="080a6dbe-3306-4d67-9ca1-5a5229ba48f8" name="Changes by bogda" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LibraryApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/BookRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/BookRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/LibraryBookRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/LibraryBookRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/LibraryLogInRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/LogInAuthenticationRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/LogInAuthenticationRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/BorrowedBookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/BorrowedBookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/LogInAuthenticationService.java" beforeDir="false" />
-    </list>
+    <list id="080a6dbe-3306-4d67-9ca1-5a5229ba48f8" name="Changes by bogda" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,20 +37,6 @@
       </UrlAndAccount>
     </option>
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/service/BorrowedBookService.java">
-      <ranges>
-        <range start1="6" end1="7" start2="6" end2="7" changelist="080a6dbe-3306-4d67-9ca1-5a5229ba48f8" />
-        <range start1="10" end1="10" start2="10" end2="12" changelist="080a6dbe-3306-4d67-9ca1-5a5229ba48f8" />
-        <range start1="14" end1="15" start2="16" end2="20" changelist="080a6dbe-3306-4d67-9ca1-5a5229ba48f8" />
-        <range start1="16" end1="17" start2="21" end2="25" changelist="080a6dbe-3306-4d67-9ca1-5a5229ba48f8" />
-        <range start1="18" end1="19" start2="26" end2="28" changelist="080a6dbe-3306-4d67-9ca1-5a5229ba48f8" />
-        <range start1="21" end1="22" start2="30" end2="39" changelist="080a6dbe-3306-4d67-9ca1-5a5229ba48f8" />
-        <range start1="24" end1="25" start2="41" end2="43" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
-        <range start1="61" end1="61" start2="79" end2="81" changelist="8a872cd2-2092-4ad5-ae5c-fffb7110f00c" />
-      </ranges>
-    </file>
-  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -79,19 +52,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "settings.sync"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="repository" />
