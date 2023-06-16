@@ -4,25 +4,43 @@ import model.*;
 import repository.LibraryBorrowedBookRepo;
 
 import java.time.LocalDate;
-import java.util.Date;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+
+// implement singleton pattern because we need only one instance of class
 public class BorrowedBookService implements Subject{
 
 
     private LibraryBorrowedBookRepo libraryBorrowedBookRepo;
-    private BookService bookService;
+
+    //change this to static
+    BookService bookService = BookService.getInstance();
+
     private List<Observer> observerList;
-    public BorrowedBookService() {
+
+    private static BorrowedBookService borrowedBookService;
+
+    private BorrowedBookService() {
         this.libraryBorrowedBookRepo = new LibraryBorrowedBookRepo();
-        this.bookService = new BookService();
+        //this.bookService = new BookService();
+        this.observerList = new ArrayList<>();
     }
 
-    public Optional<Book> borrowBook(User user, Long bookID) {
+    public static BorrowedBookService getInstance() {
+        if (borrowedBookService == null) {
+            borrowedBookService = new BorrowedBookService();
+        }
+        return borrowedBookService;
+    }
+
+    // we checked that the book exists -> weed to borrow the book to the USER
+    public Optional<Book> borrowBook(User user, String bookName) {
         Book book = null;
 
-        Optional<Book> optionalBook = bookService.checkBook(bookID);
+        // retrieve the book id based on name ???
+        Optional<Book> optionalBook = bookService.checkBook(bookName);
 
         LocalDate dueDate  = LocalDate.now().plusMonths(1);
 
@@ -59,6 +77,8 @@ public class BorrowedBookService implements Subject{
         }
         return false;
     }
+
+
 
     @Override
     public void attachLibrarian(Observer observer) {

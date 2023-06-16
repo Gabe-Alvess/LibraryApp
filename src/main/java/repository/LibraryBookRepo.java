@@ -11,9 +11,12 @@ public class LibraryBookRepo implements BookRepo {
 
     private List<Book> books = new ArrayList<>();
 
+
     @Override
-    public Optional<Book> getBook(long id) {
-        return books.stream().filter(book -> book.getID() == id).findFirst();
+    public Optional<Book> getBook(String bookName) {
+        return books.stream()
+                .filter(book -> book.getName().equalsIgnoreCase(bookName))
+                .findFirst();
     }
     @Override
     public void addBook(Book book) {
@@ -39,4 +42,6 @@ public class LibraryBookRepo implements BookRepo {
     public List<Book> getAllBooks() {
         return books;
     }
+
+    private
 }
